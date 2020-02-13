@@ -1,5 +1,5 @@
-(function($) {
-  let ws = start();
+;(function($) {
+  const ws = start()
 
   // const posts = ws.subscribe('posts')
 
@@ -11,13 +11,13 @@
   //   $('.notification > ul').prepend(Template.notification(notification))
   // )
 
-  // ajax('/posts', null, 'get')
-  //   .then(posts => {
-  //     posts.map(post => $('.posts').append(Template.post(post)))
-  //   })
-  //   .catch(e => {
-  //     console.log(e)
-  //   })
+  ajax('/posts', null, 'get')
+    .then(posts => {
+      posts.map(post => $('.posts').append(Template.post(post)))
+    })
+    .catch(e => {
+      console.log(e)
+    })
 
   // $('#publish-post').on('click', async () => {
   //   const content = $('#post').val()
@@ -38,4 +38,4 @@
   //   const id = $(this).data('id')
   //   const likes = await ajax(`/posts/${id}/likes`)
   // })
-})(jQuery);
+})(jQuery)
